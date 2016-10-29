@@ -237,6 +237,13 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="containers\aspnet\Dockerfile" />
+    <Content Include="containers\aspnet\vim80-kaoriya-win64-8.0.0039-20161016.zip" />
+    <Content Include="containers\aspnet\WebDeploy_amd64_ja-JP.msi" />
+    <Content Include="containers\cm\build.ps1" />
+    <Content Include="containers\cm\Dockerfile" />
+    <Content Include="containers\cm\ssl.ps1" />
+    <Content Include="containers\cm\testsite.pfx" />
     <None Include="Properties\PublishProfiles\DepToContainer.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
