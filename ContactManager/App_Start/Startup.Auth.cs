@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Configuration;
+using System.Diagnostics;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
@@ -49,26 +51,33 @@ namespace ContactManager
             //app.UseMicrosoftAccountAuthentication(
             //    clientId: "",
             //    clientSecret: "");
+            /*            
+             *  app.UseMicrosoftAccountAuthentication(
+                            clientId: "68f91345-120d-48b6-be0f-548f67bd978f",
+                            clientSecret: "3FX6in599j4Uhj8bnvvVaan");
+                            */
             app.UseMicrosoftAccountAuthentication(
-                clientId: "68f91345-120d-48b6-be0f-548f67bd978f",
-                clientSecret: "3FX6in599j4Uhj8bnvvVaan");
+            clientId: ConfigurationManager.AppSettings["MSAuthId"],
+            clientSecret: ConfigurationManager.AppSettings["MSAuthKey"]  );
 
-            //app.UseTwitterAuthentication(
-            //   consumerKey: "",
-            //   consumerSecret: "");
+        //app.UseTwitterAuthentication(
+        //   consumerKey: "",
+        //   consumerSecret: "");
 
-            //app.UseFacebookAuthentication(
-            //   appId: "",
-            //   appSecret: "");
-            app.UseFacebookAuthentication(
-                appId: "1736333593297918",
-                appSecret: "effd8dce2e606ff8ddac3a21df0b5978" );
+        //app.UseFacebookAuthentication(
+        //   appId: "",
+        //   appSecret: "");
+        
+        app.UseFacebookAuthentication(
+                appId: ConfigurationManager.AppSettings["FBAuthId"],
+                appSecret: ConfigurationManager.AppSettings["FBAuthKey"]  );
 
             //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
             //{
             //    ClientId = "",
             //    ClientSecret = ""
             //});
+
         }
     }
 }
