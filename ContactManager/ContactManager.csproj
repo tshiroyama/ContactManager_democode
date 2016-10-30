@@ -241,6 +241,8 @@
     <Content Include="containers\cm\Dockerfile" />
     <Content Include="containers\cm\ssl.ps1" />
     <Content Include="containers\cm\testsite.pfx" />
+    <None Include="Properties\PublishProfiles\Deploy for Containers.pubxml" />
+    <None Include="Properties\PublishProfiles\Deploy to test site.pubxml" />
     <None Include="Properties\PublishProfiles\DepToContainer.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
