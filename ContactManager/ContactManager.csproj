@@ -234,9 +234,6 @@
     <Content Include="Scripts\bootstrap.min.js">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ApplicationInsights.config">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <Content Include="containers\aspnet\Dockerfile" />
     <Content Include="containers\aspnet\vim80-kaoriya-win64-8.0.0039-20161016.zip" />
     <Content Include="containers\aspnet\WebDeploy_amd64_ja-JP.msi" />
