@@ -48,36 +48,15 @@ namespace ContactManager
             app.UseTwoFactorRememberBrowserCookie(DefaultAuthenticationTypes.TwoFactorRememberBrowserCookie);
 
             // 次の行のコメントを解除して、サード パーティのログイン プロバイダーを使用したログインを有効にします
-            //app.UseMicrosoftAccountAuthentication(
-            //    clientId: "",
-            //    clientSecret: "");
-            /*            
-             *  app.UseMicrosoftAccountAuthentication(
-                            clientId: "68f91345-120d-48b6-be0f-548f67bd978f",
-                            clientSecret: "3FX6in599j4Uhj8bnvvVaan");
-                            */
+ 
             app.UseMicrosoftAccountAuthentication(
             clientId: ConfigurationManager.AppSettings["MSAuthId"],
             clientSecret: ConfigurationManager.AppSettings["MSAuthKey"]  );
 
-        //app.UseTwitterAuthentication(
-        //   consumerKey: "",
-        //   consumerSecret: "");
-
-        //app.UseFacebookAuthentication(
-        //   appId: "",
-        //   appSecret: "");
-        
-        app.UseFacebookAuthentication(
+            app.UseFacebookAuthentication(
                 appId: ConfigurationManager.AppSettings["FBAuthId"],
                 appSecret: ConfigurationManager.AppSettings["FBAuthKey"]  );
-
-            //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
-            //{
-            //    ClientId = "",
-            //    ClientSecret = ""
-            //});
-
+ 
         }
     }
 }
