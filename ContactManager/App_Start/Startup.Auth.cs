@@ -56,7 +56,7 @@ namespace ContactManager
             app.UseFacebookAuthentication(
                 appId: ConfigurationManager.AppSettings["FBAuthId"],
                 appSecret: ConfigurationManager.AppSettings["FBAuthKey"]  );
- 
+
         }
     }
 }
